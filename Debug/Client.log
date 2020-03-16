@@ -1,0 +1,16 @@
+﻿  Client.cpp
+C:\Users\Huy Do\source\repos\Client\Client\Client.cpp(28,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : see declaration of 'scanf'
+C:\Users\Huy Do\source\repos\Client\Client\Client.cpp(34,1): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winsock2.h(1831): message : see declaration of 'inet_addr'
+C:\Users\Huy Do\source\repos\Client\Client\Client.cpp(17,9): warning C4101: 'numsnt': unreferenced local variable
+C:\Users\Huy Do\source\repos\Client\Client\Client.cpp(16,9): warning C4101: 'status': unreferenced local variable
+Client.obj : error LNK2019: unresolved external symbol __imp__closesocket@4 referenced in function _main
+Client.obj : error LNK2019: unresolved external symbol __imp__connect@12 referenced in function _main
+Client.obj : error LNK2019: unresolved external symbol __imp__htons@4 referenced in function _main
+Client.obj : error LNK2019: unresolved external symbol __imp__inet_addr@4 referenced in function _main
+Client.obj : error LNK2019: unresolved external symbol __imp__send@16 referenced in function _main
+Client.obj : error LNK2019: unresolved external symbol __imp__socket@12 referenced in function _main
+Client.obj : error LNK2019: unresolved external symbol __imp__WSAStartup@8 referenced in function _main
+Client.obj : error LNK2019: unresolved external symbol __imp__WSACleanup@0 referenced in function _main
+C:\Users\Huy Do\source\repos\Client\Debug\Client.exe : fatal error LNK1120: 8 unresolved externals
