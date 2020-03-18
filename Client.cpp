@@ -70,26 +70,27 @@ main() {
 	while (1) {
 		printf("Input messages: ");
 		scanf("%s", &str);
-		int c = 1;
-		while (c <= 10)
+		int cnt = 0;
+		while (cnt <= 45)
 		{
 			send(dstSocket, str, strlen(str) + 1, 0);
-			c++;
-			Sleep(100);
+			Sleep(10);
+			numrcv = recv(dstSocket, buffer, 3, 0);
+			cnt += numrcv;
+			if (strcmp(buffer, "MHK") == 0) {
+				strcat(buffer, "@@@");
+				printf("%s\n", buffer);
+			}
+			else if (check(buffer) == 1) {
+				strcat(buffer, "OOO");
+				printf("%s\n", buffer);
+			}
+			else {
+				printf("From server: %s\n", buffer);
+				printf("Number of char: %d\n", cnt);
+			}
 		}
-		numrcv = recv(dstSocket, buffer, 3, 0);
-		cnt = cnt + numrcv;
-		if (strcmp(buffer, "MHK") == 0) {
-			strcat(buffer, "@@@");
-			printf("%s\n", buffer);
-		}
-		else if (check(buffer) == 1) {
-			strcat(buffer, "OOO");
-			printf("%s\n", buffer);
-		} else {
-			printf("From server: %s\n", buffer);
-			printf("Number of char: %d\n", cnt);
-		}
+		printf("OK\n");
 	}
 
 	/* Windows 独自の設宁E*/
